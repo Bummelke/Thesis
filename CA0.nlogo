@@ -37,9 +37,6 @@ to setup
 end
 
 to go
-  if not any? turtles [ stop ]
-  if not any? foxes [ stop ]
-  if not any? rabbits [stop]
   if ticks >= 20000 [stop]
 
   ask rabbits [
@@ -124,8 +121,8 @@ end
 GRAPHICS-WINDOW
 210
 10
-881
-682
+1531
+1332
 -1
 -1
 13.0
@@ -138,10 +135,10 @@ GRAPHICS-WINDOW
 1
 1
 1
--25
-25
--25
-25
+-50
+50
+-50
+50
 0
 0
 1
@@ -190,8 +187,8 @@ SLIDER
 initial-rabbits
 initial-rabbits
 0
-100
-100.0
+1000
+707.0
 1
 1
 NIL
@@ -220,8 +217,8 @@ SLIDER
 initial-foxes
 initial-foxes
 0
-100
-50.0
+1000
+306.0
 1
 1
 NIL
@@ -741,13 +738,45 @@ NetLogo 6.4.0
     <metric>count rabbits</metric>
     <metric>count count-grass</metric>
     <enumeratedValueSet variable="initial-rabbits">
-      <value value="100"/>
+      <value value="700"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="rabbit-gain-from-food">
       <value value="4"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="initial-foxes">
-      <value value="50"/>
+      <value value="300"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="foxes-reproduce">
+      <value value="4"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="rabbits-reproduce">
+      <value value="4"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="show-energy">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fox-gain-from-food">
+      <value value="20"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="grass-countdown">
+      <value value="30"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Pop dynamics scriptie centroidcluod" repetitions="100" runMetricsEveryStep="true">
+    <setup>setup</setup>
+    <go>go</go>
+    <exitCondition>ticks &gt;= 2000</exitCondition>
+    <metric>count foxes</metric>
+    <metric>count rabbits</metric>
+    <metric>count count-grass</metric>
+    <enumeratedValueSet variable="initial-rabbits">
+      <value value="700"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="rabbit-gain-from-food">
+      <value value="4"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-foxes">
+      <value value="300"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="foxes-reproduce">
       <value value="4"/>
